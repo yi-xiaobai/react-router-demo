@@ -7,6 +7,7 @@ import {
 
 import Home from "./components/Home";
 import About from "./components/About";
+import News from "./components/News";
 
 export default function AppRouter() {
     return (
@@ -17,7 +18,11 @@ export default function AppRouter() {
                 </li>
 
                 <li>
-                    <Link to="/about">About</Link>
+                    <Link to="/about/123">About</Link>
+                </li>
+
+                <li>
+                    <Link to="/news">News</Link>
                 </li>
             </ul>
 
@@ -32,7 +37,9 @@ export default function AppRouter() {
             {/* <Route path="/about" exact>
                 <About />
             </Route> */}
-            <Route path="/about" component={About} />
+            <Route path="/about/:id" component={About} />
+
+            <Route path="/news" component={News} />
         </Router>
     )
 

@@ -1,7 +1,8 @@
-export default function About(){
+export default function About(props) {
+    console.log('==>Get props', props);
     return (
         <div>
-            <h1>aBOUT组件</h1>
+            <h1>aBOUT组件==={props.match.params.id}</h1>
         </div>
     )
 }

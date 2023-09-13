@@ -37,3 +37,18 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
   <Route path="/news/:aid" components={News}></Route>
 </Router>;
 ```
+
+
+## 重定向
+
+### 标签重定向
+
+```jsx
+<Redirect to="/news" />
+```
+
+### 编程重定向
+
+```jsx
+this.props.history.push("/news");
+```
